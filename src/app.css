@@ -1,0 +1,417 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.loading-icon{
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/** navigace **/ 
+
+.navigation{
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #9ceaef;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    
+    overflow: hidden;
+
+}
+.navigation a{
+    display: block;
+    padding: 15px;
+    transition: background-color 0.2s;
+}
+.navigation a:hover{
+    background-color: #68d8d6;
+}
+
+.active-navigation-link{
+    background-color: #3dccc7;
+}
+
+
+/** navigace **/ 
+
+
+/***login form***/
+.login-form-overlay{
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.register-form, .login-form{
+    
+    background-color: #caf0f8;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.form-input{
+    padding: 5px;
+    outline: none;
+}
+
+.form-label{
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #023047;
+    font-weight: bold;
+}
+
+.form-submit{
+    min-width: 100px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #ffb703;
+    color: #023047;
+    margin: 15px;
+    margin-bottom: 0;
+    border: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.form-submit:hover{
+    background-color: #fb8500;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.form-exit-button{
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/****user login button****/
+.user-name-button, .login-register-buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    padding: 15px;
+    cursor: pointer;
+}
+.form-open-button{
+    font-size: 17px;
+}
+.user-name-button:hover, .form-open-button:hover{
+    text-decoration: underline;
+}
+/*****user login button***/
+
+
+/** post creator **/
+.post-creator{
+    background-color: #cae9ff;
+    border-radius: 7px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    min-height: 100px;
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+
+}
+.get-file-button-input{
+    display: none;
+}
+.get-file-button{
+    background-color: #1b4965;
+    color: #ffc300;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.get-file-button:hover{
+    background-color: #133347;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.post-creator-picture-preview{
+    display: block;
+    max-width: 75%;
+    max-height: 500px;
+    margin-bottom: 25px;
+}
+
+.post-creator-cancel-button{
+    position: absolute;
+    right: 7%;
+    top: 90px;
+    cursor: pointer;
+}
+
+.post-creator-name-preview{
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-right: 1px;
+}
+.post-creator-name-preview:focus{
+    border-bottom: 2px solid#4af0ea;
+    margin-bottom: 3px;
+
+}
+
+.post-creator-publish-button{
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    background-color: #ffb703;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    color: #023047;
+
+}
+.post-creator-publish-button:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background-color: #fb8500;
+}
+
+
+/*** user header ***/
+.user-header, .under-header{
+    max-width: 300px;
+    height: 75px;
+    margin: 0 auto;
+    background-color: #e3fdff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    position: relative;
+
+}
+.under-header{
+    overflow: auto;
+}
+
+.user-header-username, .under-header-text{
+    font-size: 20px;
+    cursor: default;
+    text-align: center;
+}
+
+.user-follow-button, .user-unfollow-button, .activate-delete-button{
+    outline: none;
+    border: 0;
+    padding: 7px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-weight: bold;
+    color: #023047;
+}
+
+.user-follow-button{
+    background-color: #9ef01a;
+
+}
+.user-follow-button:hover{
+    background-color: #70e000;
+
+}
+.user-unfollow-button{
+    background-color: #ff4f4d;
+
+}
+.user-unfollow-button:hover{
+    background-color: rgb(255, 27, 42);
+
+}
+
+.activate-delete-button{
+    background-color: rgb(224, 224, 224);
+
+}
+.activate-delete-button:hover{
+    background-color: rgb(212, 212, 212);
+
+}
+
+
+.followers{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 22px;
+    max-width: 170px;
+    white-space: nowrap;
+}
+
+
+/*** user header ***/
+
+/*** delete post ***/
+.delete-post-overlay{
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    margin: 25px;
+    border-radius: 30px;
+    z-index: 1000;
+}
+.trash-can{
+    position: absolute;
+    font-size: 4rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.445);
+    cursor: pointer;
+}
+.trash-can:hover{
+    font-size: 5rem;
+
+}
+
+/*** delete post ***/
+
+.not-exist{
+    display: block;
+    max-width: 200px;
+    text-align: center;
+    margin: 75px auto;
+    overflow: hidden;
+
+}
+
+
+@media (max-width:500px) {
+    .navigation{
+        flex-direction: column;
+    }
+    .user-name-button, .login-register-buttons{
+        background-color: #fff;
+        border-radius: 0 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        margin-right: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width:400px){
+    .login-form, .register-form{
+        min-width: 100vw;
+
+    }
+    .login-form+div, .register-form+div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+@media (max-width:350px){
+    .delete-post-overlay{
+        margin: 25px 0;
+    }
+}
+@media (max-width:300px){
+    .navigation{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .user-header, .under-header{
+        flex-direction: column;
+    }
+    .delete-post-overlay{
+        height: 100vw;
+        width: 100vw;
+
+        border-radius: 5px;
+    }
+    
+}
+@media (max-width:180px){
+    .post-creator{
+        display: none;
+    }
+    .user-name-button, .login-register-buttons{
+        display: none;
+    }
+}
+@media (max-width:100px){
+    .navigation a{
+        padding-left:  0;
+        padding-right:  0;
+        text-align: center;
+    }
+}
