@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactphotoshareapp/static/css/main.92aab14b.css",
+    "main.js": "/reactphotoshareapp/static/js/main.222cd7cf.js",
+    "static/js/787.924567e0.chunk.js": "/reactphotoshareapp/static/js/787.924567e0.chunk.js",
+    "index.html": "/reactphotoshareapp/index.html",
+    "main.92aab14b.css.map": "/reactphotoshareapp/static/css/main.92aab14b.css.map",
+    "main.222cd7cf.js.map": "/reactphotoshareapp/static/js/main.222cd7cf.js.map",
+    "787.924567e0.chunk.js.map": "/reactphotoshareapp/static/js/787.924567e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92aab14b.css",
+    "static/js/main.222cd7cf.js"
+  ]
+}
